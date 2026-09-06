@@ -1,0 +1,62 @@
+# =========================
+# Java / Spring Boot
+# =========================
+
+**/target/
+*.class
+*.jar
+*.war
+
+# =========================
+# Maven
+# =========================
+
+.mvn/timing.properties
+
+# =========================
+# React / Vite
+# =========================
+
+**/node_modules/
+**/dist/
+**/.vite/
+
+# =========================
+# Environment / Secrets
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# Spring local configuration
+**/application-local.properties
+**/application-local.yml
+**/application-local.yaml
+
+# =========================
+# IDE
+# =========================
+
+.vscode/
+.idea/
+*.iml
+
+.classpath
+.project
+.settings/
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+
+*.log
+logs/

@@ -61,3 +61,6 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: mvn package -DskipTests
+
+      - name: Build Docker image
+        run: docker build -t finpay-backend:latest .

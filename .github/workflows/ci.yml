@@ -43,6 +43,13 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Create test database
+        env:
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          mysql -h 127.0.0.1 -u root -p"$DB_PASSWORD" \
+            -e "CREATE DATABASE IF NOT EXISTS finpay_test;"
+
       - name: Run tests
         env:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}

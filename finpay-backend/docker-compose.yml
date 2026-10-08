@@ -1,0 +1,25 @@
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: finpay-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: finpay
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backend:
+    build: .
+    container_name: finpay-backend
+    ports:
+      - "8080:8080"
+    environment:
+      DB_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/finpay
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:

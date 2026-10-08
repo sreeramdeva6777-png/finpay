@@ -564,8 +564,16 @@ a {
   align-items: center;
 }
 
-.navbar-left .navbar-brand {
+.navbar-mobile-brand {
   display: none;
+
+  align-items: center;
+  gap: 8px;
+
+  padding: 0;
+
+  background: transparent;
+  color: inherit;
 }
 
 .mobile-menu-button {
@@ -606,6 +614,8 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+  background: transparent;
+  padding: 0;
 }
 
 .user-avatar,
@@ -710,6 +720,24 @@ a {
   transition:
     box-shadow var(--transition-normal),
     transform var(--transition-normal);
+}
+.wallet-card + .wallet-card {
+  margin-top: 18px;
+}
+.wallet-actions-grid {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.wallet-actions-grid {
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.wallet-balance-card {
+  margin-bottom: 18px;
+}
+.dashboard-card + .dashboard-card {
+  margin-top: 18px;
 }
 
 .dashboard-card:hover {
@@ -1311,13 +1339,16 @@ a {
     font-size: 18px;
   }
 
-  .navbar-left .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+  .navbar-mobile-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
 
-  .navbar-left .brand-mark {
+  .navbar-mobile-brand .brand-mark {
     width: 34px;
     height: 34px;
 
@@ -1325,7 +1356,7 @@ a {
     font-size: 16px;
   }
 
-  .navbar-left .brand-text {
+  .navbar-mobile-brand .brand-text {
     font-size: 18px;
   }
 
